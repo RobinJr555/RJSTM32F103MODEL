@@ -45,12 +45,6 @@
 #include <stdio.h>
 #endif
 
-#define COM_RX_LEN			128							//串口接收缓冲长度
-#if COM_RX_LEN
-extern uint16_t COM_RX_STA;							//串口接收状态字
-extern uint8_t COM_RX_BUF[COM_RX_LEN];	//串口接收缓冲
-#endif
-
 /**
  * @brief 定义COM PORT1，连接到USART1
  */ 

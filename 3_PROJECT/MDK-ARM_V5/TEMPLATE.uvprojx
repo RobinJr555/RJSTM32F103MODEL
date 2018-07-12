@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\0_CORE;..\..\1_FWLIB_3_5_0\inc;..\..\3_PROJECT;..\..\2_DRIVE\Common;..\..\2_DRIVE\Common\DELAY;..\..\2_DRIVE\USART;..\..\2_DRIVE\OneWire;..\..\4_SENSORS;..\..\2_DRIVE\LED</IncludePath>
+              <IncludePath>..\..\0_CORE;..\..\1_FWLIB_3_5_0\inc;..\..\3_PROJECT;..\..\2_DRIVE\Common;..\..\2_DRIVE\Common\DELAY;..\..\2_DRIVE\USART;..\..\2_DRIVE\OneWire;..\..\4_SENSORS;..\..\2_DRIVE\LED;..\..\2_DRIVE\KEY;..\..\4_SENSORS\ILI9225_LCDDrive;..\..\2_DRIVE\ADC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,6 +463,101 @@
               <FileType>1</FileType>
               <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_bkp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_bkp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_cec.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_cec.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dbgmcu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_dbgmcu.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_fsmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_pwr.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_wwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\1_FWLIB_3_5_0\src\stm32f10x_wwdg.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -488,6 +583,16 @@
               <FileType>1</FileType>
               <FilePath>..\..\2_DRIVE\LED\led.c</FilePath>
             </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\2_DRIVE\KEY\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\2_DRIVE\ADC\ADC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -497,6 +602,36 @@
               <FileName>DHTxx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\4_SENSORS\DHTxx.c</FilePath>
+            </File>
+            <File>
+              <FileName>HCSR04.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\4_SENSORS\HCSR04.c</FilePath>
+            </File>
+            <File>
+              <FileName>PHOTORES.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\4_SENSORS\PHOTORES.c</FilePath>
+            </File>
+            <File>
+              <FileName>TCS3200.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\4_SENSORS\TCS3200.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LCD</GroupName>
+          <Files>
+            <File>
+              <FileName>GUI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\4_SENSORS\ILI9225_LCDDrive\GUI.c</FilePath>
+            </File>
+            <File>
+              <FileName>ILI9225_LCDDrive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\4_SENSORS\ILI9225_LCDDrive\ILI9225_LCDDrive.c</FilePath>
             </File>
           </Files>
         </Group>

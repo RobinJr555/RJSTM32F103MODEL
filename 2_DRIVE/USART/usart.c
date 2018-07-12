@@ -1,17 +1,5 @@
 #include "usart.h"
 
-#if COM_RX_LEN
-/* COM_RX_STA: 串口接收状态字
- * bit15，	接收完成标志
- * bit14，	接收到0x0d
- * bit13~0，	接收到的有效字节数目
-*/
-uint16_t COM_RX_STA = 0;
-
-/* 串口接收缓冲 */
-uint8_t COM_RX_BUF[COM_RX_LEN];
-#endif
-
 /******************************* @printf  *************************************/
 
 #ifdef PRINTF_SUPPORT //以下代码,支持printf函数,而不需要选择use MicroLIB
