@@ -12,10 +12,10 @@ struct __FILE
 }; 
 
 FILE __stdout;       
-//定义_sys_exit()以避免使用半主机模式    
-int _sys_exit(int x) 
+//定义_sys_exit()以避免使用半主机模式       
+_sys_exit(int x) 
 { 
-	return x;
+	x = x; 
 } 
 //重定义fputc函数 
 int fputc(int ch, FILE *f)
@@ -29,6 +29,12 @@ int fputc(int ch, FILE *f)
   {}    
 	return ch;
 }
+
+//__use_no_semihosting was requested, but _ttywrch was 
+_ttywrch(int ch) 
+{ 
+ch = ch; 
+} 
 #endif
 /********************************* @end ***************************************/
 
@@ -131,7 +137,7 @@ void COM_Init(COM_TypeDef COM, uint32_t BaudRate)
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
 
   USART_Init(COM_USART[COM], &USART_InitStructure);			//根据串口配置信息初始化串口 
-	USART_ITConfig(COM_USART[COM], USART_IT_RXNE, ENABLE);//开启串口接收中断
+
   USART_Cmd(COM_USART[COM], ENABLE);										//开启串口
 }
 

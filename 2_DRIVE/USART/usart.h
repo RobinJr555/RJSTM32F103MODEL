@@ -39,6 +39,11 @@
 
 #define COMn							3							//定义STM32支持的串口数	
 
+#define MODBUS_SUPPORT 		1   					//是否定义了MODBUS功能
+#ifdef  MODBUS_SUPPORT
+	#define MODBUS_USART USART1
+#endif
+
 //定义print从哪个串口输出，如果不使用printf，则注释掉这一行
 #define PRINTF_SUPPORT		UCORTEX_COM1	
 #ifdef PRINTF_SUPPORT
