@@ -18,18 +18,13 @@
 #include "delay.h"
 #include "usart.h"
 #include "led.h"
+#include "CAN.h"
 
 #include <stdio.h>
 #include "string.h"
 
-#include "ModbusProtocol.h"
+//#include "ModbusProtocol.h"
 
-
-
-extern USHORT   usRegInputStart;
-extern USHORT   usRegInputBuf[REG_INPUT_NREGS];
-extern USHORT   usRegHoldingStart;
-extern USHORT   usRegHoldingBuf[REG_HOLDING_NREGS];
 
 /* ----------------------- Start implementation -----------------------------*/
 /**
@@ -40,9 +35,8 @@ extern USHORT   usRegHoldingBuf[REG_HOLDING_NREGS];
 	void Peripherals_Init(void)
 {
 	LED_Init();
-	eMBInit(MB_RTU, 0x01, 0x01, 9600, MB_PAR_NONE); 
-	eMBEnable(); 
-
+	COM_Init(COM1, 9600);
+	MYCAN_Init();
 }
 /**
   * @brief  Main program.
@@ -50,15 +44,16 @@ extern USHORT   usRegHoldingBuf[REG_HOLDING_NREGS];
   * @retval None
   */
 int main(void)
-{
-	
+{       
+	u8 canbuf[8] = "HELLO!!!";
 	Peripherals_Init();
 	LED_On();
   while (1)
   {
-
-		(void)eMBPoll();
-		
+		Can_Send_Msg(canbuf,8);
+		LED_Toggle();
+		delay_ms(1000);
+		delay_ms(1000);
 	}
 
 }

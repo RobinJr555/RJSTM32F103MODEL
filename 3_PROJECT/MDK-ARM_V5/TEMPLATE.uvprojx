@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\0_CORE;..\..\1_FWLIB_3_5_0\inc;..\..\3_PROJECT;..\..\2_DRIVE\Common;..\..\2_DRIVE\Common\DELAY;..\..\2_DRIVE\USART;..\..\2_DRIVE\OneWire;..\..\4_SENSORS;..\..\2_DRIVE\LED;..\..\2_DRIVE\KEY;..\..\4_SENSORS\ILI9225_LCDDrive;..\..\2_DRIVE\ADC;..\..\5_MODBUS\include;..\..\5_MODBUS\port</IncludePath>
+              <IncludePath>..\..\0_CORE;..\..\1_FWLIB_3_5_0\inc;..\..\3_PROJECT;..\..\2_DRIVE\Common;..\..\2_DRIVE\Common\DELAY;..\..\2_DRIVE\USART;..\..\2_DRIVE\OneWire;..\..\4_SENSORS;..\..\2_DRIVE\LED;..\..\2_DRIVE\KEY;..\..\4_SENSORS\ILI9225_LCDDrive;..\..\2_DRIVE\ADC;..\..\5_MODBUS\include;..\..\5_MODBUS\port;..\..\2_DRIVE\CAN</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -592,6 +592,11 @@
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\2_DRIVE\ADC\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAN.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\2_DRIVE\CAN\CAN.c</FilePath>
             </File>
           </Files>
         </Group>
